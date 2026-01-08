@@ -23,14 +23,15 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Get saved theme from localStorage
     const savedTheme = localStorage.getItem('theme') as Theme | null;
+    const root = document.documentElement;
     
     if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
-      // Apply saved theme immediately
+      // Apply saved theme
       setTheme(savedTheme);
-      const root = document.documentElement;
-      if (savedTheme === 'dark') {
+      // Only add/remove if needed to avoid conflicts
+      if (savedTheme === 'dark' && !root.classList.contains('dark')) {
         root.classList.add('dark');
-      } else {
+      } else if (savedTheme === 'light' && root.classList.contains('dark')) {
         root.classList.remove('dark');
       }
     } else {
@@ -38,10 +39,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const initialTheme = prefersDark ? 'dark' : 'light';
       setTheme(initialTheme);
-      const root = document.documentElement;
-      if (initialTheme === 'dark') {
+      // Only add/remove if needed
+      if (initialTheme === 'dark' && !root.classList.contains('dark')) {
         root.classList.add('dark');
-      } else {
+      } else if (initialTheme === 'light' && root.classList.contains('dark')) {
         root.classList.remove('dark');
       }
       // Save system preference to localStorage

@@ -35,7 +35,7 @@ export default function SocialIcons({
             href={social.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${sizeClasses[size]} flex items-center justify-center rounded-full bg-white shadow-lg hover:scale-110 transition-transform`}
+            className={`${sizeClasses[size]} flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-lg dark:shadow-slate-700/50 hover:scale-110 transition-all duration-200 border border-gray-200 dark:border-slate-700`}
             aria-label={social.name}
           >
             {social.icon}
@@ -53,7 +53,7 @@ export default function SocialIcons({
           href={social.href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${sizeClasses[size]} flex items-center justify-center rounded-full bg-white shadow-md hover:scale-110 transition-transform hover:shadow-lg`}
+          className={`${sizeClasses[size]} flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-md dark:shadow-slate-700/50 hover:scale-110 transition-all duration-200 hover:shadow-lg border border-gray-200 dark:border-slate-700`}
           aria-label={social.name}
         >
           {social.icon}

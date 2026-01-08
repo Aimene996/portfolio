@@ -123,5 +123,47 @@ export const projects: Project[] = [
     ],
     technologies: ['Flutter', 'Supabase', 'SQLite', 'Provider', 'Local Storage', 'Sync Engine']
   },
+  {
+    id: 4,
+    title: 'Stylek - Barber Shop Booking Platform',
+    shortDescription: 'A full-stack barber shop booking platform built with Next.js for the web interface, Flutter-based dashboard for administration, and Supabase for authentication, database, and real-time updates.',
+    fullDescription: 'Stylek is a comprehensive full-stack barber shop booking platform designed to streamline the appointment booking process for both customers and barbers. The platform features a modern Next.js web interface that enables customers to browse services, explore barber portfolios, and book appointments seamlessly. Barbers can efficiently manage their schedules and reservations through a dedicated Flutter-based dashboard. The system leverages Supabase for robust authentication, database management, and real-time updates, ensuring a responsive and scalable solution. The platform is fully responsive, optimized for performance, and designed to handle high traffic with ease.',
+    thumbnail: '/stylek-desktop.png',
+    images: [
+      '/stylek-desktop.png',
+      '/stylek-all-devices.png',
+      '/stylek-image-1.png',
+      '/stylek-image-2.png',
+    ],
+    link: '#',
+    githubLink: 'https://github.com/Aimene996',
+    tags: ['Next.js', 'Flutter', 'Supabase', 'Full-stack', 'Real-time', 'Booking System'],
+    features: [
+      'Service Browsing & Portfolio Exploration',
+      'Seamless Appointment Booking',
+      'Barber Dashboard for Schedule Management',
+      'Real-time Reservation Updates',
+      'User Authentication & Authorization',
+      'Responsive Web Interface',
+      'Mobile Dashboard Application',
+      'Scalable Architecture',
+      'Fast Performance Optimization',
+      'Multi-device Support'
+    ],
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Flutter',
+      'Dart',
+      'Supabase',
+      'PostgreSQL',
+      'Real-time Subscriptions',
+      'Authentication',
+      'REST API',
+      'Responsive Design',
+      'State Management'
+    ]
+  },
 ];
 

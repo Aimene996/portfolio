@@ -5,6 +5,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## 🎯 Project Goal
 Build a professional, modern portfolio website matching the chosen design - split layout with hero section, navigation, and visual elements.
 
+
+## ✅ Tasks
+<!-- Add your tasks here -->
+- [x] Enable theme mode (dark/light) to the entire website with proper color handling
+- [x] Connect contact form to Firebase - allow clients to send messages and receive them in Firebase 
+
 ## 🎨 Design Reference
 **Style**: Modern split-layout portfolio with pink/orange color scheme
 - **Layout**: Two-column split (Left: Content, Right: Visual/Hero image)

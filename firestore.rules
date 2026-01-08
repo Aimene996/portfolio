@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Messages collection
+    match /messages/{messageId} {
+      // Allow read for viewing messages (restrict this in production with authentication)
+      allow read: if true;
+      // Allow create (write) - API route handles validation server-side
+      // Note: Client SDK in API route still needs write permission
+      allow create: if true;
+      // Allow update for marking messages as read
+      allow update: if true;
+      // Don't allow delete from client
+      allow delete: if false;
+    }
+    
+    // Default deny all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

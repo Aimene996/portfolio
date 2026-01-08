@@ -19,7 +19,7 @@ export default function Hero() {
     {
       name: 'GitHub',
       href: 'https://github.com/Aimene996',
-      icon: <GitHubIcon className="w-5 h-5 text-gray-800" />,
+      icon: <GitHubIcon className="w-5 h-5 text-gray-800 dark:text-slate-200" />,
     },
     {
       name: 'Facebook',
@@ -42,7 +42,7 @@ export default function Hero() {
     {
       name: 'GitHub',
       href: 'https://github.com/Aimene996',
-      icon: <GitHubIcon className="w-6 h-6 text-gray-800" />,
+      icon: <GitHubIcon className="w-6 h-6 text-gray-800 dark:text-slate-200" />,
     },
     {
       name: 'WhatsApp',
@@ -113,10 +113,10 @@ export default function Hero() {
             <div className="relative z-10 w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
               <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
                 {/* Fallback placeholder - only shows if image fails */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center z-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center z-0">
                   <div className="text-center">
                     <span className="text-6xl block mb-2">👤</span>
-                    <p className="text-gray-500 text-xs">Add profile image</p>
+                    <p className="text-gray-500 dark:text-slate-400 text-xs">Add profile image</p>
                   </div>
                 </div>
                 {/* Your profile image */}

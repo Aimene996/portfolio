@@ -1,0 +1,39 @@
+mutation CreateNewUser($email: String!, $username: String!, $passwordHash: String!) @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  user_insert(data: {
+    email: $email,
+    username: $username,
+    passwordHash: $passwordHash,
+    createdAt_expr: "request.time"
+  })
+}
+
+query GetMyPortfolio @auth(level: USER) {
+  portfolios(where: {userId: {eq_expr: "auth.uid"}}) {
+    id
+    name
+    description
+    publicUrlSlug
+    createdAt
+  }
+}
+
+mutation CreateNewProject($portfolioId: UUID!, $projectName: String!, $description: String!) @auth(level: USER) {
+  project_insert(data: {
+    portfolioId: $portfolioId,
+    projectName: $projectName,
+    description: $description,
+    createdAt_expr: "request.time"
+  })
+}
+
+query ListFeaturedProjects @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  projects(where: {isFeatured: {eq: true}}) {
+    id
+    projectName
+    description
+    externalLink
+    industry
+    projectDate
+    serviceProvided
+  }
+}

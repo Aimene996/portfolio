@@ -41,7 +41,7 @@ export default function Portfolio() {
                       }}
                     />
                 {/* Fallback placeholder - Hidden by default, shown only if image fails */}
-                <div className="image-placeholder absolute inset-0 bg-gradient-to-br from-pink-200 to-orange-200 flex items-center justify-center" style={{ display: 'none' }}>
+                <div className="image-placeholder absolute inset-0 bg-gradient-to-br from-pink-200 to-orange-200 dark:from-pink-900/30 dark:to-orange-900/30 flex items-center justify-center" style={{ display: 'none' }}>
                   <span className="text-4xl">📱</span>
                 </div>
                 {/* Hover overlay */}

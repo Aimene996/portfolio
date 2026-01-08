@@ -83,10 +83,10 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             {/* Main Image Display */}
             <div className="relative w-full h-full">
               {/* Fallback placeholder */}
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-orange-200 flex items-center justify-center z-0">
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-orange-200 dark:from-pink-900/30 dark:to-orange-900/30 flex items-center justify-center z-0">
                 <div className="text-center">
                   <span className="text-6xl block mb-2">📱</span>
-                  <p className="text-gray-600 text-sm">Add project images to see them here</p>
+                  <p className="text-gray-600 dark:text-slate-400 text-sm">Add project images to see them here</p>
                 </div>
               </div>
               {/* Project image with smooth transitions */}
@@ -158,7 +158,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                       }`}
                     >
                   {/* Fallback placeholder */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-orange-200 flex items-center justify-center z-0">
+                  <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-orange-200 dark:from-pink-900/30 dark:to-orange-900/30 flex items-center justify-center z-0">
                     <span className="text-xl">📱</span>
                   </div>
                   {/* Thumbnail image */}
@@ -279,7 +279,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               <div className="relative max-w-7xl w-full h-full flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
                 <div className="relative w-full h-full max-h-[90vh]">
                   {/* Fallback placeholder */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-orange-200 flex items-center justify-center z-0">
+                  <div className="absolute inset-0 bg-gradient-to-br from-pink-200 to-orange-200 dark:from-pink-900/30 dark:to-orange-900/30 flex items-center justify-center z-0">
                     <span className="text-6xl sm:text-9xl">📱</span>
                   </div>
                   {/* Fullscreen image */}

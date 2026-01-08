@@ -17,6 +17,8 @@
 .dark {
   --background: #0f172a;
   --foreground: #f8fafc;
+  --primary-pink: #FF6B9D;
+  --primary-orange: #FFB347;
   --card-bg: #1e293b;
   --card-border: #334155;
   --text-primary: #f1f5f9;
