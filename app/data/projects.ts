@@ -135,7 +135,7 @@ export const projects: Project[] = [
       '/stylek-image-1.png',
       '/stylek-image-2.png',
     ],
-    link: '#',
+    link: 'https://barbersm.vercel.app/',
     githubLink: 'https://github.com/Aimene996',
     tags: ['Next.js', 'Flutter', 'Supabase', 'Full-stack', 'Real-time', 'Booking System'],
     features: [
