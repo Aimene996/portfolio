@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import SocialIcons, { 
   FacebookIcon, 
   LinkedInIcon,
@@ -19,49 +19,61 @@ export default function Contact() {
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    // Clear previous status with a small delay to allow React to properly unmount
-    setSubmitStatus({ type: null, message: '' });
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus({
-          type: 'success',
-          message: data.message || 'Message sent successfully! I\'ll get back to you soon.',
-        });
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        });
-      } else {
-        setSubmitStatus({
-          type: 'error',
-          message: data.error || 'Failed to send message. Please try again.',
-        });
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    
+    // Check honeypot field - if filled, it's likely spam
+    const honeypot = (e.target as HTMLFormElement).querySelector('input[name="_website"]') as HTMLInputElement;
+    if (honeypot && honeypot.value) {
       setSubmitStatus({
         type: 'error',
-        message: 'Network error. Please check your connection and try again.',
+        message: 'Spam detected. Please try again.',
       });
-    } finally {
-      setIsSubmitting(false);
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    // Submit form to FormSubmit
+    if (formRef.current) {
+      // Create a FormData object
+      const formDataObj = new FormData(formRef.current);
+      
+      try {
+        const response = await fetch('https://formsubmit.co/aimeneharbi@gmail.com', {
+          method: 'POST',
+          body: formDataObj,
+        });
+
+        if (response.ok) {
+          setSubmitStatus({
+            type: 'success',
+            message: 'Message sent successfully! I\'ll get back to you soon.',
+          });
+          // Reset form
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+          });
+        } else {
+          setSubmitStatus({
+            type: 'error',
+            message: 'Failed to send message. Please try again.',
+          });
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        setSubmitStatus({
+          type: 'error',
+          message: 'Network error. Please check your connection and try again.',
+        });
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
 
@@ -100,7 +112,10 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-slate-100 mb-4">Get In Touch</h2>
-          <div className="w-24 h-1 bg-[#FF6B9D] mx-auto"></div>
+          <div className="w-24 h-1 bg-[#FF6B9D] mx-auto mb-4"></div>
+          <p className="text-sm sm:text-base text-gray-600 dark:text-slate-400 max-w-2xl mx-auto">
+            I typically respond within 24 hours. Free consultation for new projects.
+          </p>
         </div>
 
         <div className="max-w-2xl mx-auto">
@@ -129,7 +144,22 @@ export default function Contact() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+          <form ref={formRef} onSubmit={handleSubmit} method="POST" action="https://formsubmit.co/aimeneharbi@gmail.com" className="space-y-4 sm:space-y-6">
+            {/* FormSubmit Configuration Fields */}
+            <input type="hidden" name="_subject" value="New Contact Form Message from Portfolio" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+            
+            {/* Honeypot field - hidden from users, visible to bots */}
+            <input
+              type="text"
+              name="_website"
+              tabIndex={-1}
+              autoComplete="off"
+              style={{ position: 'absolute', left: '-9999px' }}
+              aria-hidden="true"
+            />
+
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                 Name

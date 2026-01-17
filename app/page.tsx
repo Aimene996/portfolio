@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import StickyCTA from './components/StickyCTA';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Portfolio />
       <Contact />
+      <StickyCTA />
     </main>
   );
 }

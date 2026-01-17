@@ -1,18 +1,35 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import ThemeToggle from './ThemeToggle';
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/portfolio', label: 'Portfolio' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: 'Home', section: null },
+    { href: '/', label: 'About', section: 'about' },
+    { href: '/', label: 'Portfolio', section: 'portfolio' },
+    { href: '/', label: 'Contact', section: 'contact' },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, section: string | null) => {
+    if (section && pathname === '/') {
+      e.preventDefault();
+      scrollToSection(section);
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-slate-700 transition-colors duration-200">
@@ -29,11 +46,24 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 dark:text-slate-300 hover:text-[#FF6B9D] dark:hover:text-[#FF6B9D] transition-colors duration-200 font-medium"
+                onClick={(e) => handleNavClick(e, link.section)}
+                className={`transition-colors duration-200 font-medium ${
+                  pathname === link.href || (link.section && pathname === '/' && false)
+                    ? 'text-[#FF6B9D] dark:text-[#FF6B9D]'
+                    : 'text-gray-700 dark:text-slate-300 hover:text-[#FF6B9D] dark:hover:text-[#FF6B9D]'
+                }`}
               >
                 {link.label}
               </Link>
             ))}
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="bg-[#FF6B9D] text-white px-4 py-2 rounded-full font-semibold 
+                        hover:bg-[#FF5A8A] transition-colors shadow-md hover:shadow-lg 
+                        transform hover:scale-105 duration-200 text-sm"
+            >
+              Hire Me
+            </button>
             <ThemeToggle />
           </div>
 
@@ -71,12 +101,25 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={(e) => {
+                  handleNavClick(e, link.section);
+                  setIsMenuOpen(false);
+                }}
                 className="block text-gray-700 dark:text-slate-300 hover:text-[#FF6B9D] dark:hover:text-[#FF6B9D] transition-colors duration-200 font-medium"
-                onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
+            <button
+              onClick={() => {
+                scrollToSection('contact');
+                setIsMenuOpen(false);
+              }}
+              className="w-full bg-[#FF6B9D] text-white px-4 py-2.5 rounded-full font-semibold 
+                        hover:bg-[#FF5A8A] transition-colors shadow-md mt-2"
+            >
+              Hire Me
+            </button>
           </div>
         )}
       </div>

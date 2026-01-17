@@ -55,24 +55,24 @@ export default function Portfolio() {
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-slate-100 mb-2 group-hover:text-[#FF6B9D] transition-colors duration-200">
                   {project.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-slate-400 mb-3 sm:mb-4 line-clamp-2">{project.shortDescription}</p>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-slate-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">{project.shortDescription}</p>
                 <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
-                  {project.tags.slice(0, 3).map((tag, index) => (
+                  {project.tags.slice(0, 4).map((tag, index) => (
                     <span
                       key={index}
-                      className="px-2 sm:px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded-full text-xs sm:text-sm"
+                      className="px-2.5 sm:px-3 py-1 bg-[#FF6B9D]/10 dark:bg-[#FF6B9D]/20 text-[#FF6B9D] rounded-full text-xs sm:text-sm font-medium"
                     >
                       {tag}
                     </span>
                   ))}
-                  {project.tags.length > 3 && (
-                    <span className="px-2 sm:px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded-full text-xs sm:text-sm">
-                      +{project.tags.length - 3}
+                  {project.tags.length > 4 && (
+                    <span className="px-2.5 sm:px-3 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300 rounded-full text-xs sm:text-sm">
+                      +{project.tags.length - 4}
                     </span>
                   )}
                 </div>
                 <span className="text-[#FF6B9D] font-semibold group-hover:underline inline-flex items-center text-sm sm:text-base">
-                  View Project →
+                  View Details →
                 </span>
               </div>
             </Link>

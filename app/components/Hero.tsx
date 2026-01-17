@@ -9,6 +9,13 @@ import SocialIcons, {
 } from './SocialIcons';
 import DecorativeShapes from './DecorativeShapes';
 
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
+
 export default function Hero() {
   const socialIconsRow = [
     {
@@ -59,7 +66,7 @@ export default function Hero() {
           <div className="space-y-4 sm:space-y-6 lg:pr-8 text-center lg:text-left">
             {/* Tagline */}
             <p className="text-sm font-bold text-[#FF6B9D] uppercase tracking-wide">
-              Mobile Developer
+              Mobile & Web Developer
             </p>
 
             {/* Greeting */}
@@ -74,17 +81,26 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-slate-300 leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Mobile developer specializing in Flutter, Firebase, and Supabase. 
-              I create beautiful, performant mobile applications with modern architecture 
-              and seamless user experiences.
+              I transform ideas into high-performance mobile and web applications. 
+              Specializing in Flutter, Firebase, and Supabase, I help startups and 
+              businesses build scalable apps that users love and businesses rely on.
             </p>
 
-            {/* CTA Button */}
-            <div className="flex justify-center lg:justify-start">
-              <button className="bg-[#FF6B9D] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold 
-                                hover:bg-[#FF5A8A] transition-colors shadow-lg hover:shadow-xl 
-                                transform hover:scale-105 duration-200 text-sm sm:text-base">
-                Hire me
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="bg-[#FF6B9D] text-white px-8 sm:px-10 py-3 sm:py-3.5 rounded-full font-semibold 
+                            hover:bg-[#FF5A8A] transition-colors shadow-lg hover:shadow-xl 
+                            transform hover:scale-105 duration-200 text-base sm:text-lg">
+                Hire Me
+              </button>
+              <button 
+                onClick={() => scrollToSection('portfolio')}
+                className="bg-white dark:bg-slate-800 text-[#FF6B9D] border-2 border-[#FF6B9D] px-8 sm:px-10 py-3 sm:py-3.5 rounded-full font-semibold 
+                            hover:bg-[#FF6B9D]/10 dark:hover:bg-[#FF6B9D]/20 transition-colors shadow-lg hover:shadow-xl 
+                            transform hover:scale-105 duration-200 text-base sm:text-lg">
+                View My Work
               </button>
             </div>
 
