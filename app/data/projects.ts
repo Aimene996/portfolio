@@ -89,6 +89,43 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    title: 'Watinex - Import & E-commerce Platform',
+    shortDescription: 'A professional import company website for Watinex — facilitating e-commerce product imports from China and Dubai to Algeria with sourcing services, 48h Dubai delivery, and full supply chain support.',
+    fullDescription: 'Watinex is a modern business website for an import company specializing in e-commerce product sourcing from China and Dubai to Algeria. The platform showcases the company\'s services including product sourcing, 48-hour delivery from Dubai, direct contact support, and custom e-commerce solutions. Built with Next.js and featuring a bilingual Arabic/French interface with full RTL support, the website delivers a premium brand experience with smooth animations, responsive design, and clear service presentation. The site includes WhatsApp integration for instant customer communication, detailed service pages, and a professional company portfolio.',
+    thumbnail: '/watinex-1.png',
+    images: [
+      '/watinex-1.png',
+    ],
+    link: 'https://watinex.vercel.app/',
+    githubLink: 'https://github.com/Aimene996',
+    tags: ['Next.js', 'TypeScript', 'RTL/Arabic', 'E-commerce', 'Import/Export', 'Bilingual'],
+    features: [
+      'Product Sourcing from China & Dubai',
+      '48h Dubai-to-Algeria Delivery',
+      'Bilingual Interface (Arabic/French)',
+      'Full RTL Layout Support',
+      'WhatsApp Business Integration',
+      'Custom E-commerce Solutions',
+      '24/7 Support Availability',
+      'Supplier Network Management',
+      'Professional Service Showcase',
+      'Responsive Mobile-first Design'
+    ],
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'i18n Internationalization',
+      'RTL Support',
+      'Responsive Design',
+      'WhatsApp API',
+      'SEO Optimization',
+      'Vercel Deployment'
+    ]
+  },
+  {
+    id: 4,
     title: 'PostAI - Facebook Content Management SaaS',
     shortDescription: 'A comprehensive SaaS platform for automating Facebook posting, scheduling, and content management using Flutter, Facebook GraphQL API, Supabase, and ChatGPT integration',
     fullDescription: 'PostAI is a full-featured SaaS application designed to help businesses and content creators automate their Facebook presence. The platform enables users to schedule posts, manage multiple Facebook pages, analyze engagement metrics, and generate AI-powered content using ChatGPT. Built with Flutter for cross-platform mobile support, the app integrates with Facebook GraphQL API for direct posting capabilities, Supabase for backend services, and Riverpod for state management. Features include subscription-based plans, automated scheduling patterns, post analytics, and intelligent content generation.',
@@ -130,7 +167,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: 'Expenses Chantier - Construction Site Management',
     shortDescription: 'A comprehensive mobile application for managing construction sites, tracking expenses, materials, and project progress using Flutter and modern backend technologies',
     fullDescription: 'Expenses Chantier is a professional construction site management application designed to help construction companies and project managers efficiently track and manage their construction projects. The app provides tools for expense tracking, material inventory management, worker attendance, project timeline tracking, and detailed reporting. Built with Flutter for cross-platform compatibility, the application offers an intuitive interface for on-site use, allowing managers to log expenses in real-time, track material deliveries, monitor project progress, and generate comprehensive reports. The app features offline capabilities for use in areas with limited connectivity, ensuring data is never lost and can be synchronized when internet access is available.',
@@ -173,7 +210,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: 'Task Management App',
     shortDescription: 'Productivity app with offline support, built with Flutter and Supabase backend',
     fullDescription: 'A powerful task management application designed to help users organize their work and personal tasks efficiently. The app features offline-first architecture, allowing users to work without internet connectivity. It includes task creation, categorization, due dates, reminders, team collaboration, and data synchronization when online.',
@@ -198,7 +235,7 @@ export const projects: Project[] = [
     technologies: ['Flutter', 'Supabase', 'SQLite', 'Provider', 'Local Storage', 'Sync Engine']
   },
   {
-    id: 6,
+    id: 7,
     title: 'Stylek - Barber Shop Booking Platform',
     shortDescription: 'A full-stack barber shop booking platform built with Next.js for the web interface, Flutter-based dashboard for administration, and Supabase for authentication, database, and real-time updates.',
     fullDescription: 'Stylek is a comprehensive full-stack barber shop booking platform designed to streamline the appointment booking process for both customers and barbers. The platform features a modern Next.js web interface that enables customers to browse services, explore barber portfolios, and book appointments seamlessly. Barbers can efficiently manage their schedules and reservations through a dedicated Flutter-based dashboard. The system leverages Supabase for robust authentication, database management, and real-time updates, ensuring a responsive and scalable solution. The platform is fully responsive, optimized for performance, and designed to handle high traffic with ease.',
