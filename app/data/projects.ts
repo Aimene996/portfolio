@@ -15,6 +15,80 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: 'GravityPhone - POS & Store Management Platform',
+    shortDescription: 'A comprehensive cloud-based platform for phone and electronics stores — Point of Sale, inventory management, repairs tracking, supplier management, and real-time analytics.',
+    fullDescription: 'GravityPhone is a full-featured cloud platform designed specifically for phone and electronics retail stores. It provides an all-in-one solution for managing daily operations including point-of-sale transactions, stock and inventory management, device repair tracking, supplier orders, and detailed business analytics. Built with Next.js and modern web technologies, the platform delivers a sleek dark-themed interface with real-time data synchronization, multi-store support, and comprehensive reporting dashboards. The system handles everything from barcode scanning and receipt generation to employee management and financial reporting.',
+    thumbnail: '/gravityphone-1.png',
+    images: [
+      '/gravityphone-1.png',
+    ],
+    link: 'https://gravityphone.vercel.app/',
+    githubLink: 'https://github.com/Aimene996',
+    tags: ['Next.js', 'TypeScript', 'Cloud POS', 'SaaS', 'Analytics', 'Inventory'],
+    features: [
+      'Point of Sale (POS) System',
+      'Stock & Inventory Management',
+      'Device Repair Tracking',
+      'Supplier Order Management',
+      'Real-time Business Analytics',
+      'Multi-store Support',
+      'Employee Management',
+      'Financial Reporting & Dashboards',
+      'Barcode Scanning & Receipt Generation',
+      'Cloud Data Synchronization'
+    ],
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'PostgreSQL',
+      'Prisma ORM',
+      'REST API',
+      'Cloud Deployment',
+      'Real-time Updates',
+      'Responsive Design'
+    ]
+  },
+  {
+    id: 2,
+    title: 'CutMatch - Barber Booking Platform',
+    shortDescription: 'A modern barber shop booking platform with online appointments, barber portfolios, service management, and a beautiful French/Arabic interface for seamless customer experiences.',
+    fullDescription: 'CutMatch is an elegant barber shop booking platform that connects customers with their ideal barbers. The platform features a stunning landing page with service browsing, barber portfolio galleries, and an intuitive appointment booking flow. Customers can explore available services like classic cuts, beard grooming, and fades, view barber profiles with their work samples, and book appointments in just a few clicks. Built with Next.js and Supabase, the platform supports multi-language interfaces (French/Arabic) and provides barbers with a comprehensive dashboard for managing their schedules, services, and client relationships.',
+    thumbnail: '/cutmatch-1.png',
+    images: [
+      '/cutmatch-1.png',
+    ],
+    link: 'https://cutmatch-xi.vercel.app/fr',
+    githubLink: 'https://github.com/Aimene996',
+    tags: ['Next.js', 'Supabase', 'Booking System', 'Multi-language', 'Full-stack'],
+    features: [
+      'Online Appointment Booking',
+      'Barber Portfolio Galleries',
+      'Service Browsing & Selection',
+      'Multi-language Support (FR/AR)',
+      'Customer Reviews & Ratings',
+      'Schedule Management Dashboard',
+      'Real-time Availability Updates',
+      'Client Relationship Management',
+      'Responsive Mobile-first Design',
+      'Automated Booking Confirmations'
+    ],
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Supabase',
+      'PostgreSQL',
+      'Tailwind CSS',
+      'Authentication',
+      'Real-time Subscriptions',
+      'i18n Internationalization',
+      'Responsive Design'
+    ]
+  },
+  {
+    id: 3,
     title: 'PostAI - Facebook Content Management SaaS',
     shortDescription: 'A comprehensive SaaS platform for automating Facebook posting, scheduling, and content management using Flutter, Facebook GraphQL API, Supabase, and ChatGPT integration',
     fullDescription: 'PostAI is a full-featured SaaS application designed to help businesses and content creators automate their Facebook presence. The platform enables users to schedule posts, manage multiple Facebook pages, analyze engagement metrics, and generate AI-powered content using ChatGPT. Built with Flutter for cross-platform mobile support, the app integrates with Facebook GraphQL API for direct posting capabilities, Supabase for backend services, and Riverpod for state management. Features include subscription-based plans, automated scheduling patterns, post analytics, and intelligent content generation.',
@@ -56,7 +130,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 2,
+    id: 4,
     title: 'Expenses Chantier - Construction Site Management',
     shortDescription: 'A comprehensive mobile application for managing construction sites, tracking expenses, materials, and project progress using Flutter and modern backend technologies',
     fullDescription: 'Expenses Chantier is a professional construction site management application designed to help construction companies and project managers efficiently track and manage their construction projects. The app provides tools for expense tracking, material inventory management, worker attendance, project timeline tracking, and detailed reporting. Built with Flutter for cross-platform compatibility, the application offers an intuitive interface for on-site use, allowing managers to log expenses in real-time, track material deliveries, monitor project progress, and generate comprehensive reports. The app features offline capabilities for use in areas with limited connectivity, ensuring data is never lost and can be synchronized when internet access is available.',
@@ -99,7 +173,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 3,
+    id: 5,
     title: 'Task Management App',
     shortDescription: 'Productivity app with offline support, built with Flutter and Supabase backend',
     fullDescription: 'A powerful task management application designed to help users organize their work and personal tasks efficiently. The app features offline-first architecture, allowing users to work without internet connectivity. It includes task creation, categorization, due dates, reminders, team collaboration, and data synchronization when online.',
@@ -124,7 +198,7 @@ export const projects: Project[] = [
     technologies: ['Flutter', 'Supabase', 'SQLite', 'Provider', 'Local Storage', 'Sync Engine']
   },
   {
-    id: 4,
+    id: 6,
     title: 'Stylek - Barber Shop Booking Platform',
     shortDescription: 'A full-stack barber shop booking platform built with Next.js for the web interface, Flutter-based dashboard for administration, and Supabase for authentication, database, and real-time updates.',
     fullDescription: 'Stylek is a comprehensive full-stack barber shop booking platform designed to streamline the appointment booking process for both customers and barbers. The platform features a modern Next.js web interface that enables customers to browse services, explore barber portfolios, and book appointments seamlessly. Barbers can efficiently manage their schedules and reservations through a dedicated Flutter-based dashboard. The system leverages Supabase for robust authentication, database management, and real-time updates, ensuring a responsive and scalable solution. The platform is fully responsive, optimized for performance, and designed to handle high traffic with ease.',
@@ -166,4 +240,3 @@ export const projects: Project[] = [
     ]
   },
 ];
-
