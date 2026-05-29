@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db } from '../../../lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
+export const runtime = 'edge';
+
 export async function POST(request: NextRequest) {
   try {
     // Check if Firebase is initialized
