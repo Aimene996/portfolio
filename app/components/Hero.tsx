@@ -135,7 +135,7 @@ export default function Hero() {
               }}
             >
               I transform ideas into high-performance mobile and web applications. 
-              Specializing in Flutter, Firebase, and Supabase, I help startups and 
+              Specializing in Flutter, Next.js, and Supabase, I help startups and 
               businesses build scalable apps that users love and businesses rely on.
             </p>
 
@@ -148,7 +148,7 @@ export default function Hero() {
                 transition: 'all 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.45s',
               }}
             >
-              {['Flutter', 'Next.js', 'Firebase', 'Supabase', 'TypeScript'].map((tech, i) => (
+              {['Flutter', 'Next.js', 'Supabase', 'TypeScript', 'PostgreSQL'].map((tech, i) => (
                 <span 
                   key={tech}
                   className="px-3 py-1 text-xs font-mono font-medium bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-slate-300 

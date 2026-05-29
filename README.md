@@ -9,7 +9,7 @@ Build a professional, modern portfolio website matching the chosen design - spli
 ## ✅ Tasks
 <!-- Add your tasks here -->
 - [x] Enable theme mode (dark/light) to the entire website with proper color handling
-- [x] Connect contact form to Firebase - allow clients to send messages and receive them in Firebase 
+- [x] Connect contact form via FormSubmit - allow clients to send messages by email
 
 ## 🎨 Design Reference
 **Style**: Modern split-layout portfolio with pink/orange color scheme

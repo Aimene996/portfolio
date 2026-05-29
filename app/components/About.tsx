@@ -7,8 +7,8 @@ export default function About() {
   const skills = [
     { name: 'Flutter', level: 95, color: 'from-blue-400 to-blue-600' },
     { name: 'Next.js / React', level: 90, color: 'from-gray-600 to-gray-800 dark:from-gray-400 dark:to-gray-600' },
-    { name: 'Firebase', level: 88, color: 'from-orange-400 to-orange-600' },
-    { name: 'Supabase', level: 85, color: 'from-emerald-400 to-emerald-600' },
+    { name: 'Supabase', level: 88, color: 'from-emerald-400 to-emerald-600' },
+    { name: 'PostgreSQL', level: 82, color: 'from-indigo-400 to-indigo-600' },
     { name: 'TypeScript', level: 88, color: 'from-blue-500 to-blue-700' },
     { name: 'Node.js', level: 80, color: 'from-green-500 to-green-700' },
   ];
@@ -83,7 +83,7 @@ export default function About() {
           <ScrollReveal delay={100}>
             <p className="text-base sm:text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-4 sm:mb-6">
               I&apos;m a passionate mobile &amp; web developer specializing in Flutter and Next.js development. 
-              With expertise in Firebase, Supabase, and cloud technologies, I build scalable, high-performance 
+              With expertise in Supabase, PostgreSQL, and cloud technologies, I build scalable, high-performance 
               applications that deliver exceptional user experiences.
             </p>
           </ScrollReveal>
@@ -133,7 +133,7 @@ export default function About() {
           <ScrollReveal delay={500}>
             <div className="mt-8 sm:mt-10">
               <div className="flex flex-wrap gap-2 sm:gap-3 justify-center sm:justify-start">
-                {['Flutter', 'Next.js', 'React', 'Firebase', 'Supabase', 'TypeScript', 'Dart', 'Node.js', 'PostgreSQL', 'Prisma'].map((tech, i) => (
+                {['Flutter', 'Next.js', 'React', 'Supabase', 'TypeScript', 'Dart', 'Node.js', 'PostgreSQL', 'Prisma'].map((tech, i) => (
                   <span 
                     key={tech}
                     className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white dark:bg-slate-800 text-gray-700 dark:text-slate-300 

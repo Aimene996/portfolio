@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Aimene Harbi - Mobile Developer",
-  description: "Mobile developer specializing in Flutter, Firebase, and Supabase. Creating beautiful, performant mobile applications.",
+  description: "Mobile & web developer specializing in Flutter, Next.js, and Supabase. Creating beautiful, performant applications.",
 };
 
 export default function RootLayout({
