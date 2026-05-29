@@ -276,4 +276,40 @@ export const projects: Project[] = [
       'State Management'
     ]
   },
+  {
+    id: 8,
+    title: 'Barber Shop - Premium Salon Platform',
+    shortDescription: 'A premium barber shop website with online booking, portfolio gallery, events, boutique shop, and a polished French interface for a complete salon experience.',
+    fullDescription: 'Barber Shop is a modern salon platform built for premium barbershops. The site invites customers to book appointments, browse a curated portfolio of hair and beard work, discover events, and shop grooming products from an integrated boutique. A clean landing experience highlights the brand story, while filtered portfolio galleries showcase expertise across hair and beard styles. The platform includes user authentication, multi-language support (French), and responsive design optimized for mobile booking flows. Deployed on Vercel for fast global delivery and a reliable production experience.',
+    thumbnail: '/efive-1.png',
+    images: [
+      '/efive-1.png',
+    ],
+    link: 'https://efive-eight.vercel.app/',
+    githubLink: 'https://github.com/Aimene996',
+    tags: ['Next.js', 'TypeScript', 'Booking', 'E-commerce', 'French', 'Full-stack'],
+    features: [
+      'Online Appointment Booking',
+      'Portfolio Gallery (Hair & Beard)',
+      'Events & Promotions Section',
+      'Premium Products Boutique',
+      'User Authentication',
+      'Multi-language Support (French)',
+      'Responsive Mobile-first Design',
+      'Location & Contact Information',
+      'Service Category Filtering',
+      'Vercel Production Deployment'
+    ],
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Vercel',
+      'Responsive Design',
+      'Authentication',
+      'i18n Internationalization',
+      'SEO Optimization'
+    ]
+  },
 ];
